@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  height: 100%;
+  .app-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow:
+      0 3px 5px -1px rgba(0,0,0,.2),
+      0 6px 10px 0 rgba(0,0,0,.14),
+      0 1px 18px 0 rgba(0,0,0,.12);
+  }
+  .app-page-header {
+    position: fixed;
+    top: 4em;
+    color: #3f51b5;
+    border-bottom: 1px solid #3f51b5;
+  }
+  .app-content {
+    height: 100%;
+    margin-top: 5em;
+    padding-top: 1.5em;
+    .mat-form-field {
+      width: 100% !important;
+    }
+  }
+}

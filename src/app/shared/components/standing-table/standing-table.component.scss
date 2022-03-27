@@ -1,0 +1,86 @@
+.main-container {
+  position: relative;
+  .loading-spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 56px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .table-container {
+    position: relative;
+    overflow: auto;
+    .standing-table {
+      width: 100%;
+      .row-main {
+        td {
+          border-bottom-width: 0;
+        }
+        .mat-column-detail {
+          width: 4em;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .row-detail {
+        height: 0;
+        // display: none;
+        .row-detail-content {
+          overflow: hidden;
+          width: 90%;
+          margin: 0 4em 1em 4em;
+          .race-item-header {
+            font-weight: bold;
+            border-bottom: 1px solid #e0e5fd;
+            margin-top: 0.5em;
+            color: #0000008A
+            // margin-bottom: 0.5em;
+          }
+          .race-item-row {
+            border-left: 1px solid #e0e5fd;
+            border-right: 1px solid #e0e5fd;
+            background: #feffff;
+            &:last-child {
+              border-bottom: 1px solid #e0e5fd;
+            }
+            .race-round {
+              span {
+                margin-left: 1em;
+              }
+            }
+          }
+          .row-champion {
+            background: #e7f7fc;
+          }
+          .race-item-row, .race-item-header {
+            display: flex;
+            height: 20px;
+            font-size: 0.8em;
+            .race-round {
+              font-weight: bold;
+            }
+            .race-round, .race-country, .race-constructor {
+              flex:1;
+            }
+            .race-name, .race-winner, .race-date {
+              flex: 2;
+            }
+            .race-circuit {
+              flex: 3
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

@@ -2,9 +2,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -21,7 +22,31 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ],
+      "@env/*": [
+        "environments/*"
+      ],
+      "@services/*": [
+        "app/shared/services/*"
+      ],
+      "@models/*": [
+        "app/shared/models/*"
+      ],
+      "@entities/*": [
+        "app/shared/entities/*"
+      ],
+      "@validators/*": [
+        "app/shared/validators/*"
+      ],
+      "@guards/*": [
+        "app/shared/guards/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
